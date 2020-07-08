@@ -1,0 +1,72 @@
+*,
+::after,
+::before {
+  box-sizing: border-box;
+}
+.text {
+  margin: 0;
+}
+
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-right: auto;
+  margin-left: auto;
+  min-width: 240px;
+  @media screen and (max-width: 767px) {
+    max-width: 418px;
+  }
+  @media screen and (max-width: 1199px) {
+    max-width: 720px;
+  }
+  @media screen and (min-width: 1200px) {
+    max-width: 1200px;
+  }
+}
+
+.price {
+  @media screen and (max-width: 767px) {
+    padding-top: 84px;
+    padding-bottom: 84px;
+  }
+}
+
+.price .appeal {
+  position: relative;
+
+  margin-bottom: 20px;
+  padding-left: 80px;
+  font-size: 11px;
+  font-weight: 600;
+  line-height: 1.36;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(157, 164, 189, 0.6);
+}
+.price .appeal::before {
+  content: "";
+  position: absolute;
+  margin: 0 auto;
+  top: 50%;
+  left: 0;
+
+  width: 60px;
+  border-bottom: 1px solid rgba(157, 164, 189, 0.6);
+}
+/* утилита */
+.list {
+  list-style: none;
+  margin: 0px;
+  padding: 0px;
+}
+
+.price-list {
+  padding: 50px;
+}
+.price-list .list .item {
+  display: flex;
+}
+
+.price-list .list .item:not(:last-child) {
+  margin-bottom: 20px;
+}
